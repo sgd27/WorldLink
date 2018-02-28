@@ -19,7 +19,6 @@ const LaunchScreen = () => (
       <View style={styles.centered}>
         <Image source={Images.launch} style={styles.logo} />
       </View>
-
       <View style={styles.section}>
         <Image source={Images.ready} />
         <Text style={styles.sectionText}>
@@ -30,7 +29,7 @@ const LaunchScreen = () => (
         </Text>
       </View>
       <DevscreensButton />
-      <Button>antd</Button>
+      <Button style={{ marginLeft: 20, marginRight: 20 }}>antd</Button>
     </ScrollView>
   </View>
 )

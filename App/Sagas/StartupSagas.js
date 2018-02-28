@@ -6,10 +6,10 @@ import { is } from 'ramda'
 export const selectAvatar = GithubSelectors.selectAvatar
 
 // process STARTUP actions
-export function * startup (action) {
+export function* startup(action) {
   if (__DEV__ && console.tron) {
     // straight-up string logging
-    console.tron.log('Hello, I\'m an example of how to log via Reactotron.')
+    console.tron.log("Hello, I'm an example of how to log via Reactotron.")
 
     // logging an object for better clarity
     console.tron.log({
