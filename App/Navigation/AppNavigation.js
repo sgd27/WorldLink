@@ -7,7 +7,7 @@ import InterestScreen from '../Containers/InterestScreen'
 import LaunchScreen from '../Containers/LaunchScreen'
 
 import styles from './Styles/NavigationStyles'
-import { Images } from '../Themes'
+import { Images, Colors } from '../Themes'
 
 // Manifest of possible screens
 const tabNav = TabNavigator(
@@ -42,8 +42,9 @@ const tabNav = TabNavigator(
       }
     }),
     tabBarOptions: {
-      activeTintColor: 'black',
-      inactiveTintColor: 'gray'
+      activeTintColor: Colors.blackText,
+      inactiveTintColor: Colors.grayText,
+      style: styles.tabBar
     },
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',
@@ -58,10 +59,11 @@ const PrimaryNav = StackNavigator(
   },
   {
     // Default config for all screens
-    headerMode: 'none',
+
     initialRouteName: 'tabNav',
     navigationOptions: {
-      headerStyle: styles.header
+      headerStyle: styles.header,
+      headerTitleStyle: styles.headerTitleStyle
     }
   }
 )

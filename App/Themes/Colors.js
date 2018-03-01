@@ -1,4 +1,10 @@
 const colors = {
+  blueBackground: 'rgba(31,161,244,1)',
+  grayBackground: '#e1e1e1',
+  border: '#dcdcdc',
+  blackText: '#333333',
+  grayText: '#999999',
+
   background: '#1F0808',
   clear: 'rgba(0,0,0,0)',
   facebook: '#3b5998',

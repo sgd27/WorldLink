@@ -25,7 +25,13 @@ const images = {
   mddNormal: require('../Images/Icons/mdd_normal.png'),
   mddSelected: require('../Images/Icons/mdd_selected.png'),
   meNormal: require('../Images/Icons/me_normal.png'),
-  meSelected: require('../Images/Icons/me_selected.png')
+  meSelected: require('../Images/Icons/me_selected.png'),
+  mddBanner: require('../Images/mdd_banner.jpg'),
+  oz: require('../Images/Icons/oz_icon.png'),
+  yz: require('../Images/Icons/yz_icon.png'),
+  fz: require('../Images/Icons/fz_icon.png'),
+  hot: require('../Images/Icons/hot_icon.png'),
+  mgBg: require('../Images/mg_bg.png')
 }
 
 export default images

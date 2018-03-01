@@ -1,5 +1,11 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, KeyboardAvoidingView } from 'react-native'
+import {
+  ScrollView,
+  Text,
+  KeyboardAvoidingView,
+  SafeAreaView,
+  StatusBar
+} from 'react-native'
 import { connect } from 'react-redux'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
@@ -9,15 +15,19 @@ import styles from './Styles/InterestScreenStyle'
 
 class InterestScreen extends Component {
   static navigationOptions = {
-    title: '兴趣'
+    title: '兴趣',
+    header: null
   }
   render() {
     return (
-      <ScrollView style={styles.container}>
-        <KeyboardAvoidingView behavior="position">
-          <Text>InterestScreen</Text>
-        </KeyboardAvoidingView>
-      </ScrollView>
+      <SafeAreaView style={styles.container}>
+        <StatusBar barStyle="light-content" />
+        <ScrollView style={styles.container}>
+          <KeyboardAvoidingView behavior="position">
+            <Text>InterestScreen</Text>
+          </KeyboardAvoidingView>
+        </ScrollView>
+      </SafeAreaView>
     )
   }
 }
