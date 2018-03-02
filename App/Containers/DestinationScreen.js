@@ -56,7 +56,11 @@ class DestinationScreen extends Component {
             >
               <View style={{ flexDirection: 'row' }}>
                 <View
-                  style={{ width: 5, backgroundColor: Colors.blueBackground }}
+                  style={{
+                    marginLeft: 5,
+                    width: 5,
+                    backgroundColor: Colors.blueBackground
+                  }}
                 />
                 <Text style={styles.contentTitle}>热门去处</Text>
               </View>
@@ -69,23 +73,11 @@ class DestinationScreen extends Component {
                     <View style={{ padding: 5 }}>
                       <ImageBackground
                         source={dataItem.icon}
-                        style={{
-                          alignContent: 'center',
-                          justifyContent: 'center',
-                          height: 150
-                        }}
-                        resizeMode="contain"
+                        style={styles.gridBackground}
+                        resizeMode="stretch"
                       >
-                        <Text
-                          style={{
-                            alignSelf: 'center',
-                            color: 'white',
-                            fontSize: 20,
-                            textAlign: 'center'
-                          }}
-                        >
-                          曼谷&#10;Bangkok
-                        </Text>
+                        <Text style={styles.gridTitle}>曼谷</Text>
+                        <Text style={styles.gridTitle}>Bangkok</Text>
                       </ImageBackground>
                     </View>
                   )}
@@ -180,12 +172,7 @@ class DestinationScreen extends Component {
           }}
         >
           <Image
-            style={{
-              alignSelf: 'center',
-              height: 125,
-              width: Metrics.screenWidth - 40,
-              marginTop: 20
-            }}
+            style={styles.banner}
             source={Images.mddBanner}
             resizeMode="stretch"
           />
