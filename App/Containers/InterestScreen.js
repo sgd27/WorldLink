@@ -24,7 +24,7 @@ class InterestScreen extends Component {
   }
   render() {
     return (
-      <SafeAreaView
+      <View
         style={[styles.container, { backgroundColor: Colors.blueBackground }]}
       >
         <StatusBar barStyle="light-content" />
@@ -284,7 +284,7 @@ class InterestScreen extends Component {
             <View style={styles.separator} />
           </View>
         </ScrollView>
-      </SafeAreaView>
+      </View>
     )
   }
 }

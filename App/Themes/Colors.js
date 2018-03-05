@@ -6,6 +6,8 @@ const colors = {
   blackText: '#333333',
   mediumGrayText: '#666666',
   grayText: '#999999',
+  redText: '#ff0000',
+  dimmedBackground: 'rgba(255,255,255,0.1)',
 
   background: '#1F0808',
   clear: 'rgba(0,0,0,0)',
