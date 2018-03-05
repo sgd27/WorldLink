@@ -31,7 +31,15 @@ const images = {
   yz: require('../Images/Icons/yz_icon.png'),
   fz: require('../Images/Icons/fz_icon.png'),
   hot: require('../Images/Icons/hot_icon.png'),
-  mgBg: require('../Images/mg_bg.png')
+  mgBg: require('../Images/mg_bg.png'),
+  hw: require('../Images/Icons/hw_icon.png'),
+  rm: require('../Images/Icons/rm_icon.png'),
+  nv: require('../Images/Icons/nv_icon.png'),
+  sw: require('../Images/Icons/sw_icon.png'),
+  xqBanner: require('../Images/banner.jpg'),
+  rmPic1: require('../Images/rm_pic1.jpg'),
+  rmPic2: require('../Images/rm_pic2.jpg'),
+  hwPic: require('../Images/hw_pic.jpg')
 }
 
 export default images

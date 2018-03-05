@@ -1,8 +1,10 @@
 const colors = {
   blueBackground: 'rgba(31,161,244,1)',
   grayBackground: '#e1e1e1',
+  greenBackground: 'rgba(88,186,155,1)',
   border: '#dcdcdc',
   blackText: '#333333',
+  mediumGrayText: '#666666',
   grayText: '#999999',
 
   background: '#1F0808',
@@ -25,7 +27,7 @@ const colors = {
   fire: '#e73536',
   drawer: 'rgba(30, 30, 29, 0.95)',
   eggplant: '#251a34',
-  border: '#483F53',
+  // border: '#483F53',
   banner: '#5F3E63',
   text: '#E0D7E5'
 }
