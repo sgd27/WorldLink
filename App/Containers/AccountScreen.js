@@ -5,7 +5,8 @@ import {
   View,
   ImageBackground,
   Image,
-  StyleSheet
+  StyleSheet,
+  TouchableHighlight
 } from 'react-native'
 import { List, Button } from 'antd-mobile'
 import { connect } from 'react-redux'
@@ -75,18 +76,25 @@ class AccountScreen extends Component {
               backgroundColor: Colors.dimmedBackground
             }}
           >
-            <View
-              style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-                flex: 1
-              }}
+            <TouchableHighlight
+              style={{ flex: 1 }}
+              onPress={() => this.props.navigation.navigate('WalletScreen')}
             >
-              <Text style={{ color: 'white', fontSize: 18, marginBottom: 5 }}>
-                钱包账户
-              </Text>
-              <Text style={{ color: 'white', fontSize: 14 }}>180****9928</Text>
-            </View>
+              <View
+                style={{
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flex: 1
+                }}
+              >
+                <Text style={{ color: 'white', fontSize: 18, marginBottom: 5 }}>
+                  钱包账户
+                </Text>
+                <Text style={{ color: 'white', fontSize: 14 }}>
+                  180****9928
+                </Text>
+              </View>
+            </TouchableHighlight>
             <View
               style={{
                 height: 40,

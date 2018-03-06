@@ -46,7 +46,13 @@ const images = {
   phone: require('../Images/Icons/phone_icon.png'),
   mm: require('../Images/Icons/mm_icon.png'),
   xinxi: require('../Images/Icons/xinxi_icon.png'),
-  meBg: require('../Images/me_bg.jpg')
+  meBg: require('../Images/me_bg.jpg'),
+  tx: require('../Images/Icons/tx_icon.png'),
+  cz: require('../Images/Icons/cz_icon.png'),
+  zz: require('../Images/Icons/zz_icon.png'),
+  tt: require('../Images/Icons/tt_icon.png'),
+  zoushitu: require('../Images/zoushitu.jpg'),
+  walletBanner: require('../Images/wallet_banner.jpg')
 }
 
 export default images

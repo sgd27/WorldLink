@@ -2,7 +2,7 @@ const colors = {
   blueBackground: 'rgba(31,161,244,1)',
   grayBackground: '#e1e1e1',
   greenBackground: 'rgba(88,186,155,1)',
-  border: '#dcdcdc',
+  border: '#f1f1f1',
   blackText: '#333333',
   mediumGrayText: '#666666',
   grayText: '#999999',

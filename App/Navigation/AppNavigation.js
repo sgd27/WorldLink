@@ -1,4 +1,5 @@
 import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'
+import WalletScreen from '../Containers/WalletScreen'
 import React from 'react'
 import { Image } from 'react-native'
 import AccountScreen from '../Containers/AccountScreen'
@@ -55,6 +56,7 @@ const tabNav = TabNavigator(
 const PrimaryNav = StackNavigator(
   {
     tabNav: { screen: tabNav },
+    WalletScreen: { screen: WalletScreen },
     LaunchScreen: { screen: LaunchScreen }
   },
   {

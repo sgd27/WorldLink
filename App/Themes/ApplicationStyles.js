@@ -43,6 +43,12 @@ const ApplicationStyles = {
       ...Fonts.style.h2,
       fontSize: 14,
       color: Colors.text
+    },
+    backButton: {
+      width: 60,
+      alignItems: 'flex-start',
+      justifyContent: 'center',
+      paddingLeft: 13
     }
   },
   darkLabelContainer: {
