@@ -77,6 +77,7 @@ class AccountScreen extends Component {
             }}
           >
             <TouchableHighlight
+              underlayColor={Colors.grayBackground}
               style={{ flex: 1 }}
               onPress={() => this.props.navigation.navigate('WalletScreen')}
             >

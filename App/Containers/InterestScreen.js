@@ -10,8 +10,10 @@ import {
 } from 'react-native'
 import { connect } from 'react-redux'
 import { Carousel } from 'antd-mobile'
+import FJSON from 'format-json'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
+import HomePageActions from '../Redux/HomePageRedux'
 
 // Styles
 import styles from './Styles/InterestScreenStyle'
@@ -22,7 +24,13 @@ class InterestScreen extends Component {
     title: '兴趣',
     header: null
   }
+
+  componentWillMount() {
+    this.props.getHomePage()
+  }
+
   render() {
+    const { payload } = this.props
     return (
       <View
         style={[styles.container, { backgroundColor: Colors.blueBackground }]}
@@ -31,6 +39,7 @@ class InterestScreen extends Component {
         <ScrollView
           style={[styles.container, { backgroundColor: Colors.grayBackground }]}
         >
+          <Text>{FJSON.plain(payload.data.homePagePicList)}</Text>
           <Carousel>
             <Image style={styles.banner} source={Images.xqBanner} />
             <Image style={styles.banner} source={Images.xqBanner} />
@@ -289,8 +298,14 @@ class InterestScreen extends Component {
   }
 }
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => ({
+  payload: state.homePage.payload,
+  fetching: state.homePage.fetching,
+  error: state.homePage.error
+})
 
-const mapDispatchToProps = dispatch => ({})
+const mapDispatchToProps = dispatch => ({
+  getHomePage: () => dispatch(HomePageActions.homePageRequest())
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(InterestScreen)

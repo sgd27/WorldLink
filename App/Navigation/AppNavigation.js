@@ -15,7 +15,8 @@ const tabNav = TabNavigator(
   {
     InterestScreen: { screen: InterestScreen },
     DestinationScreen: { screen: DestinationScreen },
-    AccountScreen: { screen: AccountScreen }
+    AccountScreen: { screen: AccountScreen },
+    LaunchScreen: { screen: LaunchScreen }
   },
   {
     // Default config for all screens
