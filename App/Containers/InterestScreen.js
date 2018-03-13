@@ -39,7 +39,6 @@ class InterestScreen extends Component {
         <ScrollView
           style={[styles.container, { backgroundColor: Colors.grayBackground }]}
         >
-          <Text>{FJSON.plain(payload.data.homePagePicList)}</Text>
           <Carousel>
             <Image style={styles.banner} source={Images.xqBanner} />
             <Image style={styles.banner} source={Images.xqBanner} />
@@ -48,7 +47,7 @@ class InterestScreen extends Component {
           <View
             style={{
               flexDirection: 'row',
-              height: 100,
+              height: 80,
               backgroundColor: 'white'
             }}
           >
@@ -71,7 +70,8 @@ class InterestScreen extends Component {
           </View>
           <View
             style={{
-              height: 205,
+              justifyContent: 'flex-end',
+              height: 150,
               backgroundColor: 'white',
               marginTop: 10
             }}
@@ -79,14 +79,14 @@ class InterestScreen extends Component {
             <View
               style={{
                 flexDirection: 'row',
-                marginLeft: 20,
-                marginTop: 15,
-                marginBottom: 15
+                marginLeft: 14,
+                marginTop: 10,
+                marginBottom: 10
               }}
             >
               <View
                 style={{
-                  width: 5,
+                  width: 3,
                   backgroundColor: Colors.greenBackground
                 }}
               />
@@ -135,8 +135,8 @@ class InterestScreen extends Component {
             <View
               style={{
                 flexDirection: 'row',
-                marginLeft: 20,
-                marginTop: 15
+                marginLeft: 14,
+                marginTop: 10
               }}
             >
               <View
@@ -152,15 +152,15 @@ class InterestScreen extends Component {
               <View
                 style={{
                   flex: 1,
-                  marginLeft: 15
+                  marginLeft: 10
                 }}
               >
                 <Text style={styles.itemTitle} numberOfLines={2}>
                   【东京出发】富士山+芦之湖经典一日自由行
                 </Text>
-                <View style={{ flexDirection: 'row', marginTop: 5 }}>
+                <View style={{ flexDirection: 'row', marginTop: 10 }}>
                   <Text style={styles.itemTag}>信誉保证</Text>
-                  <Text style={[styles.itemTag, { marginLeft: 10 }]}>
+                  <Text style={[styles.itemTag, { marginLeft: 7 }]}>
                     第三方保障
                   </Text>
                 </View>
@@ -188,15 +188,15 @@ class InterestScreen extends Component {
               <View
                 style={{
                   flex: 1,
-                  marginLeft: 15
+                  marginLeft: 10
                 }}
               >
                 <Text style={styles.itemTitle} numberOfLines={2}>
                   【东京出发】富士山+芦之湖经典一日自由行
                 </Text>
-                <View style={{ flexDirection: 'row', marginTop: 5 }}>
+                <View style={{ flexDirection: 'row', marginTop: 10 }}>
                   <Text style={styles.itemTag}>信誉保证</Text>
-                  <Text style={[styles.itemTag, { marginLeft: 10 }]}>
+                  <Text style={[styles.itemTag, { marginLeft: 7 }]}>
                     第三方保障
                   </Text>
                 </View>
@@ -224,51 +224,15 @@ class InterestScreen extends Component {
               <View
                 style={{
                   flex: 1,
-                  marginLeft: 15
+                  marginLeft: 10
                 }}
               >
                 <Text style={styles.itemTitle} numberOfLines={2}>
                   【东京出发】富士山+芦之湖经典一日自由行
                 </Text>
-                <View style={{ flexDirection: 'row', marginTop: 5 }}>
+                <View style={{ flexDirection: 'row', marginTop: 10 }}>
                   <Text style={styles.itemTag}>信誉保证</Text>
-                  <Text style={[styles.itemTag, { marginLeft: 10 }]}>
-                    第三方保障
-                  </Text>
-                </View>
-                <View
-                  style={{
-                    flex: 1,
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    alignItems: 'flex-end'
-                  }}
-                >
-                  <Text style={styles.itemPeriod}>一天一晚</Text>
-                  <Text style={styles.itemPrice}>￥1990</Text>
-                  <Text
-                    style={[styles.itemPrice, { color: Colors.mediumGrayText }]}
-                  >
-                    起
-                  </Text>
-                </View>
-              </View>
-            </View>
-            <View style={styles.separator} />
-            <View style={styles.item}>
-              <Image style={styles.itemImage} source={Images.hwPic} />
-              <View
-                style={{
-                  flex: 1,
-                  marginLeft: 15
-                }}
-              >
-                <Text style={styles.itemTitle} numberOfLines={2}>
-                  【东京出发】富士山+芦之湖经典一日自由行
-                </Text>
-                <View style={{ flexDirection: 'row', marginTop: 5 }}>
-                  <Text style={styles.itemTag}>信誉保证</Text>
-                  <Text style={[styles.itemTag, { marginLeft: 10 }]}>
+                  <Text style={[styles.itemTag, { marginLeft: 7 }]}>
                     第三方保障
                   </Text>
                 </View>
