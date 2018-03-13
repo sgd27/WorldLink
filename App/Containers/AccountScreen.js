@@ -20,10 +20,13 @@ import { Images, Colors, Metrics } from '../Themes'
 const { Item, Brief } = List
 
 class AccountScreen extends Component {
-  static navigationOptions = {
+  static navigationOptions = ({ navigation }) => ({
     title: '我的',
-    header: null
-  }
+    header: null,
+    tabBarOnPress: ({ scene, jumpToIndex }) => {
+      navigation.navigate('LoginScreen')
+    }
+  })
   render() {
     return (
       <ScrollView style={styles.container}>

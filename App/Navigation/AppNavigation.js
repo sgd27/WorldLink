@@ -1,10 +1,13 @@
 import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation'
-import WalletScreen from '../Containers/WalletScreen'
+import SignUpScreen from '../Containers/SignUpScreen'
+import LoginScreen from '../Containers/LoginScreen'
 import React from 'react'
 import { Image } from 'react-native'
 import AccountScreen from '../Containers/AccountScreen'
 import DestinationScreen from '../Containers/DestinationScreen'
 import InterestScreen from '../Containers/InterestScreen'
+import WalletScreen from '../Containers/WalletScreen'
+import WebScreen from '../Containers/WebScreen'
 import LaunchScreen from '../Containers/LaunchScreen'
 
 import styles from './Styles/NavigationStyles'
@@ -58,7 +61,10 @@ const PrimaryNav = StackNavigator(
   {
     tabNav: { screen: tabNav },
     WalletScreen: { screen: WalletScreen },
-    LaunchScreen: { screen: LaunchScreen }
+    LaunchScreen: { screen: LaunchScreen },
+    WebScreen: { screen: WebScreen },
+    SignUpScreen: { screen: SignUpScreen },
+    LoginScreen: { screen: LoginScreen }
   },
   {
     // Default config for all screens

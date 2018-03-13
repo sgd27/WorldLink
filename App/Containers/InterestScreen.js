@@ -6,7 +6,8 @@ import {
   SafeAreaView,
   StatusBar,
   Image,
-  ImageBackground
+  ImageBackground,
+  TouchableHighlight
 } from 'react-native'
 import { connect } from 'react-redux'
 import { Carousel } from 'antd-mobile'
@@ -29,6 +30,12 @@ class InterestScreen extends Component {
     this.props.getHomePage()
   }
 
+  gotoDetail = () => {
+    this.props.navigation.navigate('WebScreen', {
+      title: '产品详情',
+      url: 'http://101.132.135.141:8080/product?id=58'
+    })
+  }
   render() {
     const { payload } = this.props
     return (
@@ -147,6 +154,50 @@ class InterestScreen extends Component {
               />
               <Text style={styles.contentTitle}>户外</Text>
             </View>
+            <TouchableHighlight
+              underlayColor={Colors.grayBackground}
+              onPress={this.gotoDetail}
+            >
+              <View style={styles.item}>
+                <Image style={styles.itemImage} source={Images.hwPic} />
+                <View
+                  style={{
+                    flex: 1,
+                    marginLeft: 10
+                  }}
+                >
+                  <Text style={styles.itemTitle} numberOfLines={2}>
+                    【东京出发】富士山+芦之湖经典一日自由行
+                  </Text>
+                  <View style={{ flexDirection: 'row', marginTop: 10 }}>
+                    <Text style={styles.itemTag}>&nbsp;信誉保证&nbsp;</Text>
+                    <Text style={[styles.itemTag, { marginLeft: 7 }]}>
+                      &nbsp;第三方保障&nbsp;
+                    </Text>
+                  </View>
+                  <View
+                    style={{
+                      flex: 1,
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      alignItems: 'flex-end'
+                    }}
+                  >
+                    <Text style={styles.itemPeriod}>一天一晚</Text>
+                    <Text style={styles.itemPrice}>￥1990</Text>
+                    <Text
+                      style={[
+                        styles.itemPrice,
+                        { color: Colors.mediumGrayText }
+                      ]}
+                    >
+                      起
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </TouchableHighlight>
+            <View style={styles.separator} />
             <View style={styles.item}>
               <Image style={styles.itemImage} source={Images.hwPic} />
               <View
@@ -159,9 +210,9 @@ class InterestScreen extends Component {
                   【东京出发】富士山+芦之湖经典一日自由行
                 </Text>
                 <View style={{ flexDirection: 'row', marginTop: 10 }}>
-                  <Text style={styles.itemTag}>信誉保证</Text>
+                  <Text style={styles.itemTag}>&nbsp;信誉保证&nbsp;</Text>
                   <Text style={[styles.itemTag, { marginLeft: 7 }]}>
-                    第三方保障
+                    &nbsp;第三方保障&nbsp;
                   </Text>
                 </View>
                 <View
@@ -195,45 +246,9 @@ class InterestScreen extends Component {
                   【东京出发】富士山+芦之湖经典一日自由行
                 </Text>
                 <View style={{ flexDirection: 'row', marginTop: 10 }}>
-                  <Text style={styles.itemTag}>信誉保证</Text>
+                  <Text style={styles.itemTag}>&nbsp;信誉保证&nbsp;</Text>
                   <Text style={[styles.itemTag, { marginLeft: 7 }]}>
-                    第三方保障
-                  </Text>
-                </View>
-                <View
-                  style={{
-                    flex: 1,
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    alignItems: 'flex-end'
-                  }}
-                >
-                  <Text style={styles.itemPeriod}>一天一晚</Text>
-                  <Text style={styles.itemPrice}>￥1990</Text>
-                  <Text
-                    style={[styles.itemPrice, { color: Colors.mediumGrayText }]}
-                  >
-                    起
-                  </Text>
-                </View>
-              </View>
-            </View>
-            <View style={styles.separator} />
-            <View style={styles.item}>
-              <Image style={styles.itemImage} source={Images.hwPic} />
-              <View
-                style={{
-                  flex: 1,
-                  marginLeft: 10
-                }}
-              >
-                <Text style={styles.itemTitle} numberOfLines={2}>
-                  【东京出发】富士山+芦之湖经典一日自由行
-                </Text>
-                <View style={{ flexDirection: 'row', marginTop: 10 }}>
-                  <Text style={styles.itemTag}>信誉保证</Text>
-                  <Text style={[styles.itemTag, { marginLeft: 7 }]}>
-                    第三方保障
+                    &nbsp;第三方保障&nbsp;
                   </Text>
                 </View>
                 <View
