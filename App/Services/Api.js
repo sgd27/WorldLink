@@ -1,5 +1,6 @@
 // a library to wrap and simplify api calls
 import apisauce from 'apisauce'
+import { Toast } from 'antd-mobile'
 
 // our "constructor"
 const create = (baseURL = 'http://101.132.135.141:8080/api/') => {
@@ -18,6 +19,16 @@ const create = (baseURL = 'http://101.132.135.141:8080/api/') => {
     },
     // 10 second timeout...
     timeout: 10000
+  })
+
+  api.addResponseTransform(response => {
+    if (response.ok) {
+      if (response.data.success) {
+        response.data = response.data.data
+      } else {
+        response.ok = false
+      }
+    }
   })
 
   // ------

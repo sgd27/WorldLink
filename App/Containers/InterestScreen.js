@@ -15,6 +15,7 @@ import FJSON from 'format-json'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 import HomePageActions from '../Redux/HomePageRedux'
+import ImageResource from '../Transforms/ImageResource'
 
 // Styles
 import styles from './Styles/InterestScreenStyle'
@@ -47,9 +48,17 @@ class InterestScreen extends Component {
           style={[styles.container, { backgroundColor: Colors.grayBackground }]}
         >
           <Carousel>
-            <Image style={styles.banner} source={Images.xqBanner} />
-            <Image style={styles.banner} source={Images.xqBanner} />
-            <Image style={styles.banner} source={Images.xqBanner} />
+            {payload ? (
+              payload.homePagePicList.map(pic => (
+                <Image
+                  key={pic.id}
+                  style={styles.banner}
+                  source={{ uri: ImageResource(pic.pic) }}
+                />
+              ))
+            ) : (
+              <Image style={styles.banner} source={Images.xqBanner} />
+            )}
           </Carousel>
           <View
             style={{
@@ -148,7 +157,7 @@ class InterestScreen extends Component {
             >
               <View
                 style={{
-                  width: 5,
+                  width: 3,
                   backgroundColor: Colors.greenBackground
                 }}
               />

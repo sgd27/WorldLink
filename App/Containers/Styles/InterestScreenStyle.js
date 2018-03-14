@@ -60,7 +60,7 @@ export default StyleSheet.create({
   },
   itemTitle: {
     color: Colors.blackText,
-    fontSize: 10
+    fontSize: 11
   },
   itemTag: {
     borderRadius: 3,
