@@ -67,7 +67,20 @@ class InterestScreen extends Component {
               backgroundColor: 'white'
             }}
           >
-            <View style={styles.iconWrapper}>
+            {payload ? (
+              payload.interestList.map(interest => (
+                <View key={interest.id} style={styles.iconWrapper}>
+                  <Image style={styles.icon} source={Images.rm} />
+                  <Text style={styles.iconText}>{interest.name}</Text>
+                </View>
+              ))
+            ) : (
+              <View style={styles.iconWrapper}>
+                <Image style={styles.icon} source={Images.rm} />
+                <Text style={styles.iconText}>热门</Text>
+              </View>
+            )}
+            {/* <View style={styles.iconWrapper}>
               <Image style={styles.icon} source={Images.rm} />
               <Text style={styles.iconText}>热门</Text>
             </View>
@@ -82,65 +95,7 @@ class InterestScreen extends Component {
             <View style={styles.iconWrapper}>
               <Image style={styles.icon} source={Images.sw} />
               <Text style={styles.iconText}>商务</Text>
-            </View>
-          </View>
-          <View
-            style={{
-              justifyContent: 'flex-end',
-              height: 150,
-              backgroundColor: 'white',
-              marginTop: 10
-            }}
-          >
-            <View
-              style={{
-                flexDirection: 'row',
-                marginLeft: 14,
-                marginTop: 10,
-                marginBottom: 10
-              }}
-            >
-              <View
-                style={{
-                  width: 3,
-                  backgroundColor: Colors.greenBackground
-                }}
-              />
-              <Text style={styles.contentTitle}>热门去处</Text>
-            </View>
-            <ScrollView
-              style={[styles.container, { flexDirection: 'row' }]}
-              horizontal
-            >
-              <ImageBackground
-                style={styles.recommendBackground}
-                source={Images.rmPic1}
-              >
-                <Text style={styles.hotNo}>1.&nbsp;</Text>
-                <Text style={styles.hotText}>日本皇宫</Text>
-              </ImageBackground>
-              <ImageBackground
-                style={styles.recommendBackground}
-                source={Images.rmPic2}
-              >
-                <Text style={styles.hotNo}>2.&nbsp;</Text>
-                <Text style={styles.hotText}>迪士尼</Text>
-              </ImageBackground>
-              <ImageBackground
-                style={styles.recommendBackground}
-                source={Images.rmPic1}
-              >
-                <Text style={styles.hotNo}>3.&nbsp;</Text>
-                <Text style={styles.hotText}>日本皇宫</Text>
-              </ImageBackground>
-              <ImageBackground
-                style={styles.recommendBackground}
-                source={Images.rmPic2}
-              >
-                <Text style={styles.hotNo}>4.&nbsp;</Text>
-                <Text style={styles.hotText}>迪士尼</Text>
-              </ImageBackground>
-            </ScrollView>
+            </View> */}
           </View>
           <View
             style={{
